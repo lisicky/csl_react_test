@@ -4,8 +4,8 @@ module.exports = function override(webpackConfig, env) {
             const wasmExtensionRegExp = /\.wasm$/;
             webpackConfig.resolve.extensions.push('.wasm');
             webpackConfig.experiments = {
-                asyncWebAssembly: false,
-                lazyCompilation: true,
+                asyncWebAssembly: true,
+                //lazyCompilation: true,
                 syncWebAssembly: true,
                 topLevelAwait: true,
             };
